@@ -1,0 +1,32 @@
+package array;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class eb {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		int u, b;
+		System.out.println("Enter units Consumed");
+		u=Integer.parseInt(input.readLine());
+		
+		if(u<=100)
+	
+	    b=0*u;                           //0 to 100 unit
+		
+		else if(u>100 && u<=200)
+			b=0+(u-100)*3;              //101 to 200 unit
+		
+		else if (u>201 && u<=500)
+			 b=300+(u-200)*4;           //201 to 500 unit
+		
+		else 
+			b=1500+(u-500)*6;           //500 to 874 unit
+		    System.out.println("Total Bill=" +b);
+		
+	}
+
+}
