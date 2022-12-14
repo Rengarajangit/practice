@@ -1,0 +1,26 @@
+package corejava;
+
+import java.util.Scanner;
+
+public class AreaOfCircle {
+	public static void main(String[] args) {
+
+	  float r,area;
+		
+			//Get User input for Radius.
+			
+	        System.out.print("Enter Radius of Circle:");	
+			Scanner in = new Scanner(System.in);
+			r=in.nextFloat();
+			in.close();
+			
+			//Calculation
+			
+			area = (float)(22.0/7) * r * r;
+			
+			//Display area of circle
+			
+			System.out.printf("area of circle with Radius %.4f is %.4f", r, area);
+	}
+	
+}
