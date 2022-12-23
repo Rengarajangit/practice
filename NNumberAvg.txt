@@ -1,0 +1,72 @@
+package Class;
+
+import java.util.Scanner;
+
+public class NNumberAvg {
+	
+	private double sum;
+	private int N;
+	
+	public double getAverage() {
+		
+		return sum/N;
+	}
+	
+	public double getsum() {
+		return sum;
+	}
+	
+	public int getN() {
+		return N;
+	}
+	//get input and accumlate the sum value
+	public void start() {
+	
+		Scanner in = new Scanner(System.in);
+	//get the value
+		System.out.println("How Many Numbers:");
+		N=in.nextInt();
+	
+	//Repeatedly get N Numbers and Accumulate
+	   double nextN;
+	
+	//initialize sum to 0
+	  for(int i=1; i<=N; i++)
+	  {
+	//Ask Next Number
+		  System.out.print("?");
+		  nextN = in.nextDouble();
+    //Accumulate
+		  sum = sum + nextN;
+	  }  
+    //Display the Result
+		  System.out.printf("\nsum=sum%f Average=%f", sum, getAverage());
+		  
+	//free the memory
+		  in = null; 
+	  }
+		
+	}
+public class N_number_average {
+
+	public static void main(String[] args) {
+		
+		NNumberAvg avg = new NNumberAvg();
+		avg.start();
+		
+		//Dispose the object
+		avg = null; 
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
